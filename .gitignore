@@ -1,0 +1,10 @@
+# Archivos fuente de Documentacion
+*.tex
+*.cls
+
+# Archivos de entorno
+*.env
+*.env.prod
+*.env.dev
+
+node_modules
