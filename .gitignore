@@ -1,0 +1,21 @@
+# Archivos fuente de Documentacion (LaTeX)
+*.tex
+*.cls
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+*.lot
+
+# Plantillas
+docs/templates
+
+# Archivos de entorno
+*.env
+*.env.prod
+*.env.dev
+
+node_modules
