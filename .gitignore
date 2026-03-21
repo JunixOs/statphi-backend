@@ -10,7 +10,7 @@
 *.out
 *.lot
 
-# Plantillas
+# Plantillas de Documentacion
 docs/templates
 
 # Archivos de entorno
@@ -18,4 +18,11 @@ docs/templates
 *.env.prod
 *.env.dev
 
+# Modulos de Node
 node_modules
+
+# Archivos de VSCode
+.vscode/
+
+# Archivos de registro (logs)
+logs/
