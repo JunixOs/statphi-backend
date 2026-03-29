@@ -9,6 +9,7 @@
 *.toc
 *.out
 *.lot
+*.synctex
 
 # Plantillas de Documentacion
 docs/templates
