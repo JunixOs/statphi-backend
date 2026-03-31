@@ -10,6 +10,7 @@
 *.out
 *.lot
 *.synctex
+*.xdv
 
 # Plantillas de Documentacion
 docs/templates
