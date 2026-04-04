@@ -1,0 +1,7 @@
+Dark:
+	Background: #0a0a0a
+	Font: #f5f5f0, #a0a0a0
+	Border: #6b6b6b
+	Variants: #1a1a1a , #3d3d3d
+
+	Selected button: #6b6b6b
