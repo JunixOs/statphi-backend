@@ -1,2 +1,5 @@
 # statphi-backend
-API REST de Statphi desarrollado en el lenguaje de programacion JavaScript
+
+[Logo StatPhi](/public/images/icon.png)
+
+API REST de `Statphi`, que servirá para ejecutar toda la lógica de la versión Web de la aplicación.
