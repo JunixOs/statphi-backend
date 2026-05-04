@@ -28,3 +28,5 @@ node_modules
 
 # Archivos de registro (logs)
 logs/
+
+AGENTS.md
