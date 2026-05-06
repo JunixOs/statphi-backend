@@ -30,3 +30,11 @@ node_modules
 logs/
 
 AGENTS.md
+
+# Entornos virtuales de python
+*_venv/
+venv_*/
+venv/
+
+# Dataset con Requerimientos
+docs/2-requirements-engineering/requirements-dataset
