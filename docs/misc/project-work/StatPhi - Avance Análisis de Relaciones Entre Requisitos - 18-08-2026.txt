@@ -1,0 +1,77 @@
+Avance Análisis de Relaciones Entre Requisitos
+
+18-08-2026:
+	Me quede en R26
+	
+	Notas:
+	[x] Posible dependencia de R10.1 con un requisito de almacenamiento de "objetos".
+
+	[x] Posible restricción de R10.3 para otro requisito.
+
+	[x] Posible restricción de R10.4 con un requisito de almacenamiento de "objetos".
+	[x] Posible restriccion de R10.4 con un requisito de visualización de variables.
+	[x] Posible restriccion de R10.4 con un requisito de generacion de graficos.
+	[x] Posible restriccion de R10.4 con un requisito de exportacion de documentos.
+
+	[x] Posible restricción de R15.3 con otros requisitos de Estadistica Inferencial.
+
+	[ ] Posible vacio de dependencias o relación en requisitos relacionados con operaciones estadísticas, con otros requisitos.
+
+	[x] Posible dependencia de R31 (interfaz de seleccion de resultados para el documento a exportar) y R32 con el requisito 
+	    que especifica almacenamiento de "objetos".
+
+19-08-2026:
+	Me quede en R59
+
+	Notas:
+	[x] Modificar requisito que especifica añadir graficos a un documento a exportar para especificar que se puede 
+	    añadir numero de figura y notas.
+	[x] Dependencia de R54 con requisito de importación de datos.
+
+20-08-2026:
+	Me quede en R92
+
+	Notas:
+	[x] Separar R61 en interfaz de muestra de datos e interfaz de selección o consulta de datos para importación.
+	[x] Especificar métricas de tiempo en R67 para datos de una API RESTful.
+	[ ] Comenzar el resto de análisis de relaciones entre requisitos.
+
+21-08-2026:
+	Me quede en R99
+
+	Notas:
+	[x] Revisar R23.9 y buscar restricciones y dependencias
+	[x] Plantear bien R58.8 y validar.
+	[x] Analizar relaciones de R58.8 y R58.9.
+	[x] Especificar mas R98.3
+	[x] Especificar mejor R99 para incluir generación de SEED, esto para normalizar la selección aleatoria evitando asi que cada
+	    nueva sesión seleccione datos diferentes, tambien permitir crear una nueva SEED si se desea cambiar los datos seleccionados.
+22-08-2026:
+	Me quede en R100
+
+	Notas:
+	[x] Revisar todos los requisitos relacionados a Calculo de Poblaciones, esto para añadir requerimiento de redondeo de valores resultantes
+	    de estos cálculos a valores enteros.
+	[x] Analizar relaciones con R58.10, R58.11 y R58.12.
+	[x] Analizar relaciones con R99.1, R99.2, R99.3 y R99.4.
+	[x] Analizar relaciones con R107, R108, R109.
+	[x] Analizar relaciones con R110 y R111.
+
+02-09-2026:
+	Me quede en R115	
+
+	Notas:
+	[x] Revisar relaciones con R98.5.
+	[x] Revisar relaciones con R112.
+	[x] Revisar relaciones con R113 y R114.
+	[x] Revisar relaciones con R115.
+	[ ] Arreglar R58 en documento de análisis de requisitos.
+
+03-09-2026:
+	Me quede en
+
+	Notas:
+	[x] Revisar relaciones con R101.4, R101.5, R101.6.
+	[ ] Revisar relaciones con requisitos R116 en adelante.
+	[ ] Revisar relaciones con R104.7, R104.8 y R104.9.
+	[x] Mover R104.7 a Requisitos adicionales

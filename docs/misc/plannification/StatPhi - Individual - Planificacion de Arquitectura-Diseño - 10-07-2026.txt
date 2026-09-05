@@ -1,0 +1,88 @@
+Arquitectura Plug-in + Layers
+
+- Núcleo en R:
+	R se ejecuta de forma principal, cuando tenga operaciones pesadas delega el trabajo a una
+	DLL de código C o C++ o C#.
+
+- Codigo compilado en DLL para agilizar proceso:
+	La DLL se cargara como un plugin mas dentro de la aplicación.
+	La DLL se obtendrá por medio de un proyecto .NET o C puro, debe incluirse dentro de la carpeta del proyecto
+	en una carpeta src/ junto al código del proyecto R.
+
+- Envio a CRAN:
+	Para enviar a CRAN el proyecto, se debe enviar todo sin compilar en (.tgz), unicamente el código fuente
+	para realizar la compilacion directa a una DLL.
+
+- Desarrollo de la GUI:
+	Una vez se tenga el núcleo en R y C# se procede a desarrollar la GUI en Desktop que instala el paquete
+	y en Web que tendrá instalado el paquete en el servidor.
+
+- Configuración de Servidor:
+	Se debe preparar un servidor para desplegar la versión web y el instalador desktop.
+	Para ello se usara una maquina local, los requerimientos son:
+		[ ] Instalación y configuración de R, .NET y Node.js en Servidor.
+		[x] Adquirir un Dominio en Cloudflare.
+		[x] Configuración de Red local del Servidor para acceso desde Internet (Port Forwarding).
+		[x] Instalación de Sistema HIDS en el Servidor.
+		[x] Registro y configuración de dominio e IP publica del Servidor en Cloudflare.
+		[ ] Configuración de Firewall del Servidor para protegerse del trafico de Internet.
+		[ ] Instalación y configuración de Load Balancer Nginx en Servidor.
+		[x] Instalación y configuración de Docker en Servidor.
+		[x] Instalación y configuración de Dockploy en Servidor (protocolo HTTPS).
+		[x] Instalación y configuración de SonarQube en Servidor.
+		[x] Configuración de Acceso seguro SSH a GitHub (donde se alojara el proyecto).
+		[ ] Integración entre Servidor Web, Nginx y Cloudflare.
+		[ ] Creación de un Pipeline de Despliegue con las siguientes acciones:
+			[ ] Obtener codigo en GitHub (rama main, ultima reléase estable)
+			[ ] Análisis estatico con SonarQube
+			[ ] Ejecución de Pruebas
+			[ ] Build del Proyecto (docker)
+			[ ] Despliegue en Dockploy
+		[x] Configuracion de VPN y SSH para acceso y administración remota segura del Servidor.
+
+Estructura básica tentativa:
+
+Arquitectura Plug-in + Layers + ¿Clean Architecture? + ¿Vertical Slicing?
+src/
+	R-core/
+		domain/
+			descriptive_statistic/
+				module_freq/
+				module_cross_table/
+				...
+			inferencial_statistic/
+				module_hypotesis_test/
+				...
+			...	
+			shared/
+				utils/
+		services/
+			gateway/
+				db/
+				...
+			behavior/
+			modules/
+		external/
+			db/
+			files-read/
+			graphs-gen/
+		contracts/
+			…
+	registry/
+	plugins/
+		C-sharp-modules/
+	view/
+		web/
+		desktop/
+tests/
+	C-sharp-modules/
+		unit/
+		integration/
+	R-core/
+	view/
+
+Tareas Próximas según reunión Ing. Yanac y Bermúdez (27-07-2026):
+
+	[x] Cambiar de .NET a Java.
+	[ ] Como leer información genética.
+	[ ] Como almacenar información masiva de forma eficiente.

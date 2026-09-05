@@ -1,0 +1,38 @@
+Ideas de requisitos
+
+I. Aplicativo Javier - 27-07-2026:
+	- Almacenamiento de variables
+	- Visualización de variables importadas
+	- Almacenamiento de resultados en variables
+	- Almacenamiento de resultados en archivos locales
+	- Almacenamiento de resultados en base de datos con cuenta de usuario
+	- Almacenamiento de datasets o enlaces a datasets en base de datos por usuario y en general para pruebas
+	- Inicio de sesión con usuario y contraseña
+	- Almacenamiento de sesiones persistentes por dispositivo.
+	- Almacenamiento de parámetros temporales.
+
+II. Personal - 21-08-2026:
+	[x] Al ingresar manualmente o importar conjuntos de datos de fuentes externas, identificar cada variable dentro del sistema 
+	    con un ID único en lugar de usar el nombre original de la variable, esto para permitir al usuario escribir o importar 
+   	    varios conjuntos de datos que tienen un mismo nombre pero tienen asociados valores diferentes.
+	[x] Detectar cambios en los datos de una variable usando un HASH, esto para poder avisar al usuario cuando un resultado
+	    asociado a la variable modificada esta desactualizada.
+	[x] Proporcionar al usuario una forma sencilla de eliminar todos los valores asociados de una variable 
+	    solo presionando un botón.
+	[x] Requisito para manejo de resultados asociados a una variable eliminada.
+	[ ] Permitir realizar operaciones matemáticas básicas sobre un objeto.
+	[ ] Permitir realizar operaciones matemáticas básicas entre dos objetos.
+
+III. Personal - 04-09-2026:
+	[x] Añadir eliminación de cuenta.
+	[x] Añadir marcado de cuenta como eliminado.
+	[x] Añadir marcado de cuenta como bloqueado.
+	[x] Añadir marcado de cuenta como activa.
+	[x] Añadir validación de correo mediante sintaxis, verificación de dominio y servidor, 
+	    y con un código temporal.
+	[x] Añadir uso de tiempos UTC para mostrar fechas acordes a la zona horaria del usuario.
+
+	[x] Añadir secciones diferentes en panel de control.
+	[ ] Asociar rol administrador con edición de contenido educativo o informativo.
+
+	[ ] Añadir sistema de Logs en versión Web de la plataforma, solo para registrar eventos de administrador.

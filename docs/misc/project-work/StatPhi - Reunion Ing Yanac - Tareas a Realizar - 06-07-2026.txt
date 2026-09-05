@@ -1,0 +1,8 @@
+- El software brinda la GUI pero usa R de fondo.
+- R delega el trabajo a un lenguaje mas rápido.
+
+- Comparar el rendimiento de R en Windows y Linux.
+
+- Evaluar arquitectura.
+
+- Miércoles 10-1pm

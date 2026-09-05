@@ -1,0 +1,13 @@
+Tareas 27-07-2027 - Reunión Ing. Bermúdez:
+
+	[ ] Investigar como publicar documentos en RPubs
+	[ ] Subir datasets de archivos .rmd o .qmd a la nube o en GitHub.
+
+
+	[ ] Modificar documento LaTeX para que se adapte al formato de una tesis UNAS
+		Portada mejorada, mover nombres
+		Numero de secciones pequeño
+		Mejor tabla de contenido
+		Numeración mejorada
+		Interlineado 1.2
+		Margenes derecha 2.5cm, izquierda 3cm, arriba 2.5cm, abajo 2.5cm

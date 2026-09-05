@@ -1,0 +1,138 @@
+> Cambio .NET a Java:
+	- Java se queda como núcleo de la aplicación.
+	- Es probable que Java use una arquitectura Hexagonal o Clean + Pipes + Plug-in
+		Clean Architecture o Hexagonal como arquitectura principal
+		Talvez se use la arquitectura Vertical Slicing para organización de los servicios del motor de calculo en modulos específicos.
+		Arquitectura de Tuberias o Filtros para combinar diferentes operaciones, posibilidad de combinar operaciones y resultados en un solo calculo.
+		Arquitectura plug-in para integración de nuevos motores de calculo (opcional).
+
+	- R se convierte en motor estadístico avanzado, por sus funciones integradas para este ámbito.
+	- Java también es usado para un motor matemático avanzado y motor estadístico reducido, esto para reducir llamadas (latencia) y sobrecarga a R.
+	
+	                    ┌─────────────────────┐
+	                    │      Frontend      	│
+	                    └──────────┬──────────┘
+	                               │
+	                               ▼
+	                    ┌─────────────────────┐
+	                    │    Java Backend     	 │
+	                    │                     	 │
+	                    │ API / Seguridad     	 │
+	                    │ Validación          	 │
+	                    │ Orquestación        	 │
+	                    │ Persistencia             │
+	                    │ Jobs                     │
+	                    └───────┬───────┬─────┘
+	                            │          │
+	                ┌───────────┘        └────────────┐
+	                ▼                                ▼
+	       ┌─────────────────┐         ┌─────────────────┐
+	       │ Java Math Engine│             │   R Analytics   	│
+	       │                 │             │                 	│
+	       │ Álgebra         │             │ Inferencia      	│
+	       │ Numérico        │             │ Regresión       	│
+	       │ Matrices        │             │ ANOVA           	│
+	       │ Optimización    │             │ Series temp.    	│
+	       │ Estad. básica   │             │ Multivariante   	│
+	       └─────────────────┘          │ Distribuciones  	│
+        	                               │ Tests           	│
+	                                       │ Visualización          │
+	                                       └─────────────────┘
+
+	Java se encarga de:
+		Importar datos -> Debido a que ofrece librerias con mayor control para conexión con archivos y bases de datos
+		Validar Estructura
+		Validar Tipos/Datos 	--|
+					  |--> Aquí java decide si el dataset o conjunto de datos es valido, R no hace esto, aunque se podrían añadir validaciones para poder usar R como paquete independiente
+		Transformación de Datos	--|
+		Conversión a datos internos (usando Arrow/Parquet) -> para evitar la sobrecarga de serializar y deserializar al momento de mandar a R
+		Calculos Matematicos básicos - avanzado
+			Trigonometría
+			Álgebra lineal	
+			Integración
+			Derivación numérica
+			FFT
+			Optimización
+			Ecuaciones diferenciales
+			Números complejos
+			Grandes matrices
+			Paralelización
+		Análisis estadístico básico -> Puede hacer esto para evitar sobrecargar a R, podría manejar alrededor de 10000 datos de allí en mas se lo encarga a R
+			media
+			mediana
+			varianza
+			desviación estándar
+			covarianza
+			correlación
+			frecuencias
+			percentiles
+		Guardar resultados (persistencia en base de datos o archivos locales) -> Usuarios, Proyectos, Variables y Resultados por Proyecto
+		Exportar resultados -> En Excel, PDF, Word, LaTeX, R Markdown, Quarto Markdown, se puede añadir un pequeño motor que ejecute o compile código LateX o qmd para convertirlo directamente un pdf en lugar de dar solo el codigo
+		Generar graficos para la vista final (web o desktop). -> En web o desktop
+		
+	R se encarga de:
+		Estadística descriptiva
+			Media
+			Moda
+			Varianza
+			Curtosis
+			Asimetría
+			Percentiles
+			...
+		Estadística inferencial
+			t-test
+			ANOVA
+			MANOVA
+			Chi-cuadrado
+			Wilcoxon
+			Mann-Whitney
+			Kruskal
+			Friedman
+			Bootstrap
+		Estadistica Avanzada
+		Modelos
+			Regresión
+			GLM
+			LASSO
+			RIDGE
+			Elastic Net
+		Series temporales
+		Machine Learning clásico
+		Bioestadística
+		Generar graficos para exportacion (con ggplot2)
+		…
+
+
+	- Crear o establecer niveles de operaciones, como la siguiente:
+		Nivel 1 - Operaciones simples		-> Java
+		Nivel 2 - Matemática computacional	-> Java
+		Nivel 3 - Estadística especializada	-> R
+	
+	- Se debe convertir R en un servicio de calculo que reciba los datos y ejecute los calculos estadisticos (JAMAS llamar a R en operaciones sencillas)
+	- Existe 2 formas en las que se podría comunicar Java con R:
+		1. Se puede convertir a las funciones de R en una API web consumible por HTTP, usando la librería "plumber" de R.
+			Java
+			   │
+			   │ HTTP / gRPC
+			   v
+			R Web Endpoint
+			   │
+			   v
+			R Function
+	
+		2. Se puede convertir el código R en un paquete o librería, y, mediante las librerías "RCaller", "JRI" o "Rserve" (Cliente-Servidor) de Java, se podría llamar y ejecutar
+		   las funciones de la librería de R creada.
+
+		En Java se pueden usar interfaces para integrar 2 o inclusive mas motores escritos en diferentes lenguajes de programacion:
+			Application
+			    │
+			    v
+			ICalculationEngine
+			    │
+			    ├── JavaCalculationEngine
+			    │
+			    └── RCalculationEngine
+
+		- Java: orquestación, importación/exportación, cálculo numérico general, álgebra lineal, optimización y procesamiento paralelo.
+		- R: estadística clásica y avanzada, inferencia, econometría, bioestadística y generación de modelos ampliamente validados por la comunidad científica.
+		- Python (opcional): aprendizaje profundo, inteligencia artificial moderna y acceso a ecosistemas como PyTorch, TensorFlow o scikit-learn, (posible incorporación futura).

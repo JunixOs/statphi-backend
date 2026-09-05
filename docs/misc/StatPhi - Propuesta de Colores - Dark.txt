@@ -1,0 +1,103 @@
+Si buscas un **tema Dark elegante basado en negro** (similar a GitHub Dark, VS Code o Material Design), puedes usar la siguiente paleta.
+
+| Elemento            | Color                       | Hex       |
+| ------------------- | --------------------------- | --------- |
+| Fondo principal     | Negro profundo              | `#0A0A0A` |
+| Fondo secundario    | Negro suave                 | `#121212` |
+| Superficies (Cards) | Gris muy oscuro             | `#1A1A1A` |
+| Sidebar             | Negro carbón                | `#101010` |
+| Navbar              | Negro ligeramente más claro | `#151515` |
+| Modal / Dialog      | Gris oscuro                 | `#1E1E1E` |
+| Dropdown / Popover  | Gris oscuro                 | `#222222` |
+| Hover               | Gris medio oscuro           | `#2A2A2A` |
+| Active / Selected   | Gris un poco más claro      | `#333333` |
+| Bordes              | Gris oscuro                 | `#303030` |
+| Divisores           | Gris tenue                  | `#262626` |
+
+### Texto
+
+| Uso                 | Color            | Hex       |
+| ------------------- | ---------------- | --------- |
+| Texto principal     | Blanco casi puro | `#F5F5F5` |
+| Texto secundario    | Gris claro       | `#CFCFCF` |
+| Texto terciario     | Gris             | `#9E9E9E` |
+| Texto deshabilitado | Gris oscuro      | `#6E6E6E` |
+| Placeholder         | Gris             | `#808080` |
+
+### Botones
+
+| Uso              | Color     |
+| ---------------- | --------- |
+| Primario         | `#3B82F6` |
+| Hover Primario   | `#2563EB` |
+| Secundario       | `#2A2A2A` |
+| Hover Secundario | `#3A3A3A` |
+| Texto Botón      | `#FFFFFF` |
+
+### Estados
+
+| Estado  | Color     |
+| ------- | --------- |
+| Success | `#22C55E` |
+| Warning | `#F59E0B` |
+| Error   | `#EF4444` |
+| Info    | `#38BDF8` |
+
+### Inputs
+
+| Elemento    | Color     |
+| ----------- | --------- |
+| Fondo       | `#1A1A1A` |
+| Borde       | `#303030` |
+| Hover       | `#404040` |
+| Focus       | `#3B82F6` |
+| Texto       | `#F5F5F5` |
+| Placeholder | `#808080` |
+
+### Tablas
+
+| Elemento   | Color     |
+| ---------- | --------- |
+| Fondo      | `#151515` |
+| Header     | `#1E1E1E` |
+| Hover fila | `#222222` |
+| Borde      | `#2E2E2E` |
+
+### Ejemplo de uso
+
+```
+Body
+└── Fondo: #0A0A0A
+
+Sidebar
+├── Fondo: #101010
+├── Hover: #2A2A2A
+└── Texto: #CFCFCF
+
+Navbar
+├── Fondo: #151515
+└── Texto: #F5F5F5
+
+Card
+├── Fondo: #1A1A1A
+├── Borde: #303030
+└── Texto: #F5F5F5
+
+Modal
+├── Fondo: #1E1E1E
+├── Overlay: rgba(0,0,0,0.7)
+└── Borde: #303030
+
+Botón Primario
+├── Fondo: #3B82F6
+├── Hover: #2563EB
+└── Texto: #FFFFFF
+
+Input
+├── Fondo: #1A1A1A
+├── Borde: #303030
+├── Focus: #3B82F6
+└── Texto: #F5F5F5
+```
+
+Esta combinación produce un tema oscuro moderno, con buen contraste y sin llegar al negro absoluto en todos los componentes, lo que reduce la fatiga visual y mejora la jerarquía entre superficies.

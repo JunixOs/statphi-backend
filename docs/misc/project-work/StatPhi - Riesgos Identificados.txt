@@ -1,0 +1,12 @@
+Riesgos
+	- Identificación tardía de requisitos duplicados.
+	- Mala especificación de requisitos en la sección de Requisitos Refinados.
+		Sol: Detener el trabajo actual, posteriormente revisar el requerimiento, modificar con stakeholders y 
+		aplicar cambios en documento correspondiente.
+	- Identificación tardía de relación de dependencia entre 2 o mas requisitos.
+		Sol: Detener el trabajo actual, Analizar los requerimientos asociados al problema e identificar 
+		la dependencia, luego documentar.
+
+	- Identificación tardía de relación de restricción entre 2 o mas requisitos
+		Sol: Detener el trabajo actual, Analizar los requerimientos asociados al problema e identificar 
+		la restriccion, luego documentar.

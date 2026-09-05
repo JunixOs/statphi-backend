@@ -1,0 +1,91 @@
+A. Dependencia
+	Un requisito necesita que otro exista o se ejecute previamente.
+	Ejemplo:
+		R01: El sistema permitirá registrar animales.
+		R02: El sistema permitirá registrar la producción de leche de un animal.
+
+	Relación:
+		R02 → depende de → R01
+		Porque no tiene sentido registrar producción para un animal inexistente.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+B. Padre / hijo
+	Un requisito grande se descompone en requisitos más pequeños.
+
+	R10: El sistema permitirá gestionar la producción de leche.
+	Se puede descomponer en:
+		R11: Registrar producción.
+		R12: Consultar producción.
+		R13: Modificar registros.
+		R14: Generar estadísticas.
+
+	Aquí:
+		R10 = padre → R11, R12, R13, R14
+
+	Esta relación es particularmente importante porque conecta directamente con la descomposición de requisitos. 
+
+--------------------------------------------------------------------------------------------------------------------------
+
+C. Relación de Restricción: 
+
+"A" establece una condición o límite sobre cómo "B" puede cumplirse.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+D. Conflicto / contradicción
+	Dos requisitos establecen condiciones incompatibles.
+
+	Ejemplo:
+		R30: El sistema permitirá eliminar definitivamente un animal.
+		vs.
+		R31: El sistema conservará el historial de todos los animales registrados.
+
+		Aquí tienes que analizar si realmente existe una contradicción o si debes modificar R30 para convertirlo en:
+		-> El sistema permitirá desactivar un animal sin eliminar su historial.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+E. Redundancias
+	Pregunta:
+		¿Hay requisitos que dicen esencialmente lo mismo?
+	Ej.:
+		R40: El sistema permitirá consultar animales registrados.
+		R57: El usuario podrá visualizar los animales registrados.
+
+		-> Probablemente son duplicados o deberían fusionarse.
+
+	Esto te permitirá:
+		fusionar requisitos.
+		eliminar requisitos.
+		reformularlos.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+F. Relaciones funcionales
+	Pregunta:
+		¿Qué requisitos forman parte de una misma capacidad?
+
+	Ejemplo:
+
+		Animales
+		 ├── Registrar
+		 ├── Editar
+		 ├── Consultar
+		 ├── Eliminar/desactivar
+		 └── Historial
+
+	Esta sección es justamente la que después te ayudará a construir los "módulos".
+
+--------------------------------------------------------------------------------------------------------------------------
+
+G. Complementaria
+	Dos requisitos no dependen estrictamente uno del otro, pero juntos completan una capacidad.
+
+	Ejemplo:
+		R20: El sistema permitirá registrar animales.
+		R21: El sistema permitirá adjuntar fotografías de animales.
+
+		R20 <-> R21
+
+		La fotografía complementa la información del animal.

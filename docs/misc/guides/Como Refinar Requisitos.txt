@@ -1,0 +1,49 @@
+Una fórmula que te puede ayudar
+
+Cuando estés refinando tus requisitos, intenta pasar de:
+
+[Concepto subjetivo] + "debe" + [acción]
+
+a:
+
+El sistema deberá + [acción específica] + [condición] + [restricción cuantificable] + [resultado esperado].
+
+Por ejemplo:
+
+❌ El sistema debe ser portable.
+
+↓
+
+✅ El sistema deberá proporcionar una versión web y una aplicación de escritorio para Windows 10 o superior, permitiendo ejecutar las funcionalidades esenciales definidas para el sistema en ambas plataformas.
+
+Como estás trabajando primero con requisitos → modularización → épicas → historias de usuario, no necesitas convertir todos los requisitos en historias inmediatamente.
+
+Primero conviene que tus requisitos estén suficientemente refinados:
+
+Requisito original
+       ↓
+Refinamiento
+       ↓
+Requisito completo y verificable
+       ↓
+Modularización
+       ↓
+Épica
+       ↓
+Historia de usuario
+       ↓
+Criterios de aceptación
+
+Y hay una diferencia importante:
+
+Requisito:
+
+El sistema deberá proporcionar una versión web y una aplicación de escritorio para Windows 10 o superior.
+
+Historia de usuario:
+
+Como usuario, quiero acceder al sistema mediante una versión web o de escritorio para utilizarlo desde diferentes entornos.
+
+Criterios de aceptación:
+
+Dado que utilizo Windows 10 o superior, cuando instalo la aplicación de escritorio, entonces puedo acceder a las funcionalidades esenciales del sistema.
