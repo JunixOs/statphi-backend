@@ -12,6 +12,9 @@
 *.synctex
 *.xdv
 
+# Archivos temporales de Excel o Word
+~$*
+
 # Plantillas de Documentacion
 docs/templates
 
