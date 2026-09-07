@@ -71,7 +71,15 @@ Avance Análisis de Relaciones Entre Requisitos
 	Me quede en
 
 	Notas:
-	[x] Revisar relaciones con R101.4, R101.5, R101.6.
+	[x] Revisar relaciones con R101.4, R101.5, R101.6.4.
 	[ ] Revisar relaciones con requisitos R116 en adelante.
 	[ ] Revisar relaciones con R104.7, R104.8 y R104.9.
 	[x] Mover R104.7 a Requisitos adicionales
+
+06-09-2026:
+	Me quede en R130
+
+	Notas:
+	[ ] Posible relación de dependencia de R104.7 y R104.8 con requerimientos asociados a inicio de sesión.
+	[ ] R118 restringe otros requerimientos
+	[ ] R104.9 restringe todos los requisitos asociados a cuentas.
